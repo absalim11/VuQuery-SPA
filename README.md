@@ -1,18 +1,14 @@
 # VuQuery-SPA
-Simple Core SPA build base on JQuery Router and Vue Ability
+- Simple Core SPA build base on JQuery Router and Vue Ability
 
-Basic Dir Structure :
-	- baseFolder (app directory)
-		-- app
-			--- modul1
-				---- modul1.html (view of the modul)
-				---- controller.js (workflow logic of the modul)
-				---- style.css (styler of the modul)
-			--- modul2
-				---- modul2.html
-				---- controller.js
-				---- style.css
-		-- components 
-		-- core
-		-- styles
-		-- index.html
+
+Folder Structure : https://pastebin.com/raw/FafcgdeG
+Core Library :
+	- Jquery : https://jquery.com/
+	- Jquery Router : https://github.com/muzammilkm/jq-router
+	- Vue Js (2) : https://vuejs.org/guide/introduction.html
+	- Admin Template
+		-- wow admin : https://ehantechnology.com/preview.php?id=1346
+
+
+** still need improvement
