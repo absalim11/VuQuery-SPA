@@ -1,0 +1,19 @@
+/* Styles go here */
+
+.page{
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid salmon;
+}
+
+.transition{
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+}
+
+.hide{
+  display: none !important;
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPA | Basic - JQuery</title>
+	<script src="core/jquery-3.2.1.min.js"></script>
+	<script src="core/jqrouter-4.3.0.min.js"></script>
+	<script src="core/vue.js"></script>
+	<script src="core/routing.js"></script>
+
+	<!-- admin -->
+	<script src="components/theme/wadmin/js/bootstrap.min.js"></script>
+	<script src="components/theme/wadmin/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="components/theme/wadmin/plugins/switchery/switchery.min.js"></script>
+	<script src="components/theme/wadmin/plugins/fast-click/fastclick.min.js"></script>
+	<script src="components/theme/wadmin/plugins/pace/pace.min.js"></script>
+
+	<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css" />
+	<!--Font Awesome [ OPTIONAL ]-->
+	<link href="components/theme/wadmin/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="components/theme/wadmin/css/bootstrap.css" rel="stylesheet">
+	  <!--Jasmine Stylesheet [ REQUIRED ]-->
+	<link href="components/theme/wadmin/css/style.css" rel="stylesheet">
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="components/theme/wadmin/plugins/switchery/switchery.min.css" rel="stylesheet">
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <link href="components/theme/wadmin/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+	<!--Demo [ DEMONSTRATION ]-->
+	<link href="components/theme/wadmin/css/demo/jasmine.css" rel="stylesheet">
+	<link href="components/theme/wadmin/plugins/pace/pace.min.css" rel="stylesheet">        
+</head>
+
+<div id="container" class="effect mainnav-sm navbar-fixed mainnav-fixed">
+    <!--NAVBAR-->
+    <!--===================================================-->
+    <header id="navbar" class="onRender">
+        <div id="navbar-container" class="boxed">
+            <!--Navbar Dropdown-->
+            <!--================================-->
+            <div class="navbar-content clearfix">
+                <ul class="nav navbar-top-links pull-left">
+                    <!--Navigation toogle button-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!-- <li class="tgl-menu-btn">
+                        <a class="mainnav-toggle" href="#"> <i class="fa fa-navicon fa-lg"></i> </a>
+                    </li> -->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End Navigation toogle button-->
+                    <!--Messages Dropdown-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"> <i class="fa fa-envelope fa-lg"></i> <span class="badge badge-header badge-warning">9</span> 
+                                </a>
+                                <!--Message dropdown menu-->
+                                <div class="dropdown-menu dropdown-menu-md with-arrow">
+                                    <div class="pad-all bord-btm">
+                                       <div class="h4 text-muted text-thin mar-no">You have 3 messages.</div>
+                                    </div>
+                                    <div class="nano scrollable">
+                                        <div class="nano-content">
+                                            <ul class="head-list">
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="img/av2.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Andy sent you a message</div>
+                                                            <small class="text-muted">15 minutes ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="img/av4.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Lucy sent you a message</div>
+                                                            <small class="text-muted">30 minutes ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="img/av3.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Jackson sent you a message</div>
+                                                            <small class="text-muted">40 minutes ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="img/av6.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Donna sent you a message</div>
+                                                            <small class="text-muted">5 hours ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="img/av4.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Lucy sent you a message</div>
+                                                            <small class="text-muted">Yesterday</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <img src="img/av3.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Jackson sent you a message</div>
+                                                            <small class="text-muted">Yesterday</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--Dropdown footer-->
+                                    <div class="pad-all bord-top">
+                                        <a href="#" class="btn-link text-dark box-block"> <i class="fa fa-angle-right fa-lg pull-right"></i>Show All Messages </a>
+                                    </div>
+                                </div>
+                    </li>
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End message dropdown-->
+                    <!--Notification dropdown-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"> <i class="fa fa-bell fa-lg"></i> <span class="badge badge-header badge-danger">5</span> </a>
+                                <!--Notification dropdown menu-->
+                                <div class="dropdown-menu dropdown-menu-md with-arrow">
+                                    <div class="pad-all bord-btm">
+                                       <div class="h4 text-muted text-thin mar-no"> Notification </div>
+                                    </div>
+                                    <div class="nano scrollable">
+                                        <div class="nano-content">
+                                            <ul class="head-list">
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <span class="icon-wrap icon-circle bg-primary"> <i class="fa fa-comment fa-lg"></i> </span> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">New comments waiting approval</div>
+                                                            <small class="text-muted">15 minutes ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <span class="badge badge-success pull-right">90%</span>
+                                                        <div class="media-left"> <span class="icon-wrap icon-circle bg-danger"> <i class="fa fa-hdd-o fa-lg"></i> </span> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">HDD is full</div>
+                                                            <small class="text-muted">50 minutes ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <span class="icon-wrap icon-circle bg-info"> <i class="fa fa-file-word-o fa-lg"></i> </span> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Write a news article</div>
+                                                            <small class="text-muted">Last Update 8 hours ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <span class="label label-danger pull-right">New</span>
+                                                        <div class="media-left"> <span class="icon-wrap icon-circle bg-purple"> <i class="fa fa-comment fa-lg"></i> </span> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">Comment Sorting</div>
+                                                            <small class="text-muted">Last Update 8 hours ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- Dropdown list-->
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left"> <span class="icon-wrap icon-circle bg-success"> <i class="fa fa-user fa-lg"></i> </span> </div>
+                                                        <div class="media-body">
+                                                            <div class="text-nowrap">New User Registered</div>
+                                                            <small class="text-muted">4 minutes ago</small> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--Dropdown footer-->
+                                    <div class="pad-all bord-top">
+                                        <a href="#" class="btn-link text-dark box-block"> <i class="fa fa-angle-right fa-lg pull-right"></i>Show All Notifications </a>
+                                    </div>
+                                </div>
+                    </li>
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End notifications dropdown-->
+                </ul>
+                <ul class="nav navbar-top-links pull-right">
+                    <!--User dropdown-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <li id="dropdown-user" class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                            <span class="pull-right"> <img class="img-circle img-user media-object" src="img/user.png" alt="Profile Picture"> </span>
+                            <div class="username hidden-xs">Adinata</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right with-arrow">
+                            <!-- User dropdown menu -->
+                            <ul class="head-list">
+                                <li>
+                                    <a href="#"> <i class="fa fa-user fa-fw"></i> Profile </a>
+                                </li>
+                                </li>
+                                <li>
+                                    <a href="#/auth/logout"> <i class="fa fa-sign-out fa-fw"></i> Logout </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End user dropdown-->
+                </ul>
+            </div>
+            <!--================================-->
+            <!--End Navbar Dropdown-->
+        </div>
+    </header>
+    <!--===================================================-->
+    <!--END NAVBAR-->
+    <div class="boxed">
+        <!--CONTENT CONTAINER-->
+        <!--===================================================-->
+        <div id="content-container">
+	        <div class="pageheader hidden-xs onRender">
+	          <!-- breadcrumb component -->
+	        </div>
+	        <nav id="mainnav-container" class="onRender">
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a href="#/home" class="navbar-brand">
+                        <i class="fa fa-paper-plane brand-icon"></i>
+                        <div class="brand-title">
+                            <span class="brand-text"></span>
+                        </div>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+                <div id="mainnav" class="my-menu onRender">
+
+                </div>
+            </nav>
+
+        	<div id="page-content" class="my-app">
+
+        	</div>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <!--===================================================-->
+    <footer id="footer" class="my-footer onRender">
+    </footer>
+    <!--===================================================-->
+    <!-- END FOOTER -->
+    <!-- SCROLL TOP BUTTON -->
+    <!--===================================================-->
+    <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+    <!--===================================================-->
+</div>
+<!--===================================================-->
+<!-- END OF CONTAINER -->
+
+</html>

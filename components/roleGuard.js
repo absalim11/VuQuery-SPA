@@ -1,0 +1,3 @@
+function userRbAccess() {
+	/*pengaturan privilege*/
+}
